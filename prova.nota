@@ -1,0 +1,30 @@
+Massa de Dados Inicial: O script do banco de dados deve 
+conter a inserção mínima de 3 registros para cada tabela 
+criada, respeitando as restrições de chaves primárias 
+(PRIMARY KEY), chaves estrangeiras (FOREIGN KEY), 
+obrigatoriedade (NOT NULL), unicidade (UNIQUE) e 
+checagem (CHECK).
+Painel Principal (View): Criar uma View chamada 
+vw_painel_principal que funcione como alimentação 
+para a tela inicial do sistema, exibindo o nickname do 
+jogador, título da partida/confronto, modalidade do 
+jogo (categoria), data da partida e status da disputa.
+Busca de Jogadores (Function de Consulta): Criar uma 
+função em PL/pgSQL (fn_buscar_jogadores) que receba 
+um termo de busca (texto) e retorne uma tabela com 
+os jogadores cujo nickname ou e-mail coincidam com o 
+parâmetro informado.
+Vínculo e Validação de Partidas (Trigger): Criar um 
+gatilho (trg_validar_partida) disparado antes 
+da inserção de uma nova partida para garantir que 
+ela seja obrigatoriamente vinculada a um jogador 
+ativo (não banido/inativo). Além disso, automatizar 
+o registro da data de criação e a geração de log na 
+tabela historico_partidas.
+Agendamento e Cronograma de Partidas (View Ordenada): 
+Criar uma View chamada vw_cronograma_partidas que 
+liste todas as partidas cadastradas ordenadas 
+estritamente pela data de agendamento (da mais 
+próxima para a mais distante), 
+exibindo o status da partida, os dias restantes 
+até o confronto e o nickname do jogador responsável.
